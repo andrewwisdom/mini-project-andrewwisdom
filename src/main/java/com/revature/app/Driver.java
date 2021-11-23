@@ -11,7 +11,7 @@ public class Driver {
 		
 		Javalin app = Javalin.create();
 		
-		app.start(7777);
+		app.start(7776);
 		 
 		app.post("/collection", ctx -> {
 			coll.collection[currentIndex] = ctx.formParam("item");
