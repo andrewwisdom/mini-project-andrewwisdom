@@ -14,14 +14,14 @@ public class Driver {
 		app.start(7776);
 		 
 		app.post("/collection", ctx -> {
-			coll.collection[currentIndex] = ctx.formParam("item");
+			coll.arrayList.add(ctx.formParam("item"));
 			currentIndex++;
 			
 			String responseText = "";
 			
-			for (int index = 0; index < currentIndex; index++) {
-				if (coll.collection[index] != null) {
-					responseText += coll.collection[index] + "<br>";
+			for (int index = 0 ; index < currentIndex; index++) {
+				if (coll.arrayList.get(index) != null) {
+					responseText += coll.arrayList.get(index) + "<br>";
 				}
 			}
 			ctx.html(responseText);

@@ -1,5 +1,8 @@
 package com.revature.app;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Collection {
-	String[] collection = new String[10];
+	List<String> arrayList = new ArrayList<String>();
 }
